@@ -1,15 +1,17 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+dotenv.config();
 const db = mysql.createConnection({
     user: 'root',
     host: 'localhost',
-    // password: '',
-    database: 'productlist',
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
 });
 
 app.get('/products', (req, res) => {
