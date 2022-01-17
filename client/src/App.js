@@ -20,8 +20,11 @@ function App() {
         return(
           <div className=""key={val.id}>
             <p className="">{val.product_name}</p>
+<<<<<<< HEAD
             <p className="">{val.product_type}</p>
             <p className="">{val.product_price}</p>
+=======
+>>>>>>> 685ca162e3fd0fa2b1ab04d7c565731f0d09c2dd
           </div>
         )
       })}
